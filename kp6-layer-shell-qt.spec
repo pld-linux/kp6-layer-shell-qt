@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.3.4
+%define		kdeplasmaver	6.3.5
 %define		qtver		5.15.2
 %define		kf6ver		5.82.0
 %define		kpname		layer-shell-qt
 Summary:	layer-shell-qt
 Name:		kp6-%{kpname}
-Version:	6.3.4
+Version:	6.3.5
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	7d153944ba6e52837fe3c8d9f26fc802
+# Source0-md5:	5ef7234446a3723adcefe10ef0bcb389
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -35,7 +35,7 @@ BuildRequires:	wayland-protocols
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xz
 BuildRequires:	zlib-devel
-Obsoletes:	kp5-%{kpname} < %{version}
+Obsoletes:	kp5-%{kpname} < 6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt6dir		%{_libdir}/qt6
@@ -48,7 +48,7 @@ Summary:	Header files for %{kpname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kpname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Obsoletes:	kp5-%{kpname}-devel < %{version}
+Obsoletes:	kp5-%{kpname}-devel < 6
 
 %description devel
 Header files for %{kpname} development.
