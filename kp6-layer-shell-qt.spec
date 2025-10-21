@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qtver		5.15.2
 %define		kf6ver		5.82.0
 %define		kpname		layer-shell-qt
 Summary:	layer-shell-qt
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	d6d7a958bfea0659e227c0b08b123dde
+# Source0-md5:	df351f3445a1741b87f9dcec4eedd18a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -85,12 +85,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %ghost %{_libdir}/libLayerShellQtInterface.so.6
-%attr(755,root,root) %{_libdir}/libLayerShellQtInterface.so.*.*
-%attr(755,root,root) %{_libdir}/qt6/plugins/wayland-shell-integration/liblayer-shell.so
+%{_libdir}/libLayerShellQtInterface.so.*.*
+%{_libdir}/qt6/plugins/wayland-shell-integration/liblayer-shell.so
 %dir %{_libdir}/qt6/qml/org/kde/layershell
 %{_libdir}/qt6/qml/org/kde/layershell/LayerShellQtQml.qmltypes
 %{_libdir}/qt6/qml/org/kde/layershell/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/layershell/libLayerShellQtQml.so
+%{_libdir}/qt6/qml/org/kde/layershell/libLayerShellQtQml.so
 %{_libdir}/qt6/qml/org/kde/layershell/qmldir
 
 %files devel
