@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.6.0
+%define		kdeplasmaver	6.6.1
 %define		qtver		5.15.2
 %define		kf6ver		5.82.0
 %define		kpname		layer-shell-qt
 Summary:	layer-shell-qt
 Name:		kp6-%{kpname}
-Version:	6.6.0
+Version:	6.6.1
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	1a3f149ed01cc0b1f3ad5ba3f110b2d5
+# Source0-md5:	a1932a163232ba4b04c54edfc69579b7
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
