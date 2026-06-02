@@ -42,7 +42,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		qt6dir		%{_libdir}/qt6
 
 %description
-kscreenlocker
+This component is meant for applications to be able to easily use
+clients based on wlr-layer-shell.
+
+%description -l pl.UTF-8
+Ten komponent jest pomyślany tak, aby aplikacje mogły z łatwością
+używać klientów opartych na wlr-layer-shell.
 
 %package devel
 Summary:	Header files for %{kpname} development
